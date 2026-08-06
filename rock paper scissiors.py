@@ -3,11 +3,18 @@ import random
 emojis={'r':'🗿','p':'📄','s':'✂️'}
 choices=('r','p','s')
 
-while True:
+def get_user_choice():
+ while True:
  user_choice=input("Enter your choice (r/p/s):").lower()
  if user_choice not in choices:
     print("Invalid choice!")
     continue
+ else:
+  return user_choice
+  
+
+while True:
+ user_choice=get_user_choice()
 
  computer_choice=random.choice(choices)
 
